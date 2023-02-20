@@ -76,4 +76,3 @@ rospy.init_node('subscribernode', anonymous=True)
 ```
 if __name__ == '__main__':
     Subscriber_node()
-    ```
