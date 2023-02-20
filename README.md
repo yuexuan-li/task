@@ -56,14 +56,14 @@ class Subscriber_node:
         self.window_size = 20
         self.window = []
         self.mean = [0.0,0.0,0.0]
-        ```
+```
 We initialize a ROS node named 'subscribernode' and create a subscriber object that listens for messages on the topic. We use rospy.spin() to keep the subscriber node running and listening for messages.
 ```
 rospy.init_node('subscribernode', anonymous=True)
         rospy.Subscriber('topic', Float32MultiArray, self.callback)
         rospy.spin()
-        ```
- The callback() function is called every time a new message is received on the topic. We append the message data to the window, and if the window size exceeds window_size, we remove the oldest message from the window and subtract its contribution to each channel sum. We then add the new message's contribution to each channel sum, and compute the mean of each channel in the window by dividing each channel sum by the number of messages in the window. Finally, we log the means using rospy.loginfo().
+```
+ The callback() function is called every time a new message is received on the topic. We append the message data to the window, and if the window size exceeds window_size, we remove the oldest message from the window and subtract its contribution to each channel sum. We then add the new message's contribution to each channel sum, and compute the mean of each channel in the window by dividing each channel sum by the number of messages in the window.    Finally, we log the means using rospy.loginfo().
  ```
   def callback(self, data):
         self.window.append(data.data)
