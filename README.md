@@ -6,7 +6,7 @@ cd catkin_ws/src/task/scripts/
 
 source /opt/ros/noetic/setup.bash
 roscore
-
+. ~/catkin_ws/devel/setup.bash
 rosrun scripts task_one.py 
 rosrun scripts test publisher.py 
 rosrun scripts task_two.py 
