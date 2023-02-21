@@ -8,7 +8,7 @@ source /opt/ros/noetic/setup.bash
 roscore
 . ~/catkin_ws/devel/setup.bash
 rosrun scripts task_one.py 
-rosrun scripts test publisher.py 
+rosrun scripts test_publisher.py 
 rosrun scripts task_two.py 
 ```
 ## Task1: Write a publisher that publishes an 8-dimensional integers, randomly samples from 0-500  
