@@ -3,8 +3,9 @@
 Please follow these steps
 ```
 cd catkin_ws/src/task/scripts/
-
 source /opt/ros/noetic/setup.bash
+source ~/catkin_ws/devel/setup.bash
+~/.bashrc
 roscore
 . ~/catkin_ws/devel/setup.bash
 rosrun scripts task_one.py 
