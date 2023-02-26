@@ -8,9 +8,9 @@ source ~/catkin_ws/devel/setup.bash
 ~/.bashrc
 roscore
 . ~/catkin_ws/devel/setup.bash
-rosrun scripts task_one.py 
-rosrun scripts test_publisher.py 
-rosrun scripts task_two.py 
+rosrun task task_one.py 
+rosrun task test_publisher.py 
+rosrun task task_two.py 
 ```
 ## Task1: Write a publisher that publishes an 8-dimensional integers, randomly samples from 0-500  
 ### Set up
